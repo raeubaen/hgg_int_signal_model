@@ -1,0 +1,83 @@
+{
+   TStyle *myStyle  = new TStyle("MyStyle","My Root Styles");
+
+   // from ROOT plain style
+   myStyle->SetCanvasBorderMode(0);
+   myStyle->SetPadBorderMode(0);
+   myStyle->SetPadColor(0);
+   myStyle->SetCanvasColor(0);
+   myStyle->SetTitleColor(1);
+   myStyle->SetStatColor(0);
+
+   myStyle->SetLabelSize(0.03,"xyz"); // size of axis values
+
+   myStyle->SetHistLineWidth(2);
+   myStyle->SetHistLineColor(kBlue+1);
+
+   myStyle->SetLineWidth(1);
+
+   //myStyle->SetLineStyleString(2,"[12 12]"); // postscript dashes
+   //myStyle->SetErrorX(0.001);
+
+   //myStyle->SetPadTickX(0);
+   //myStyle->SetPadTickY(0);
+
+
+   myStyle->SetFuncColor(kRed+1);
+   myStyle->SetFuncWidth(3);
+   //myStyle->SetLineColor(kRed+1);
+
+   myStyle->SetTitleFont(62, "X");
+   myStyle->SetTitleFont(62, "Y");
+
+   myStyle->SetLabelSize(0.03, "X");
+   myStyle->SetTitleSize(0.03, "X");
+
+   myStyle->SetLabelSize(0.03, "Y");
+   myStyle->SetTitleSize(0.03, "Y");
+
+   myStyle->SetTitleOffset(1.7, "Y");
+   myStyle->SetTitleOffset(1.6, "X");
+
+   myStyle->SetStatFontSize(0.005);
+
+   // default canvas positioning
+//   myStyle->SetCanvasDefX(900);
+//  myStyle->SetCanvasDefY(20);
+   myStyle->SetCanvasDefH(600);
+   myStyle->SetCanvasDefW(800);
+
+   myStyle->SetPadBottomMargin(0.3);
+   myStyle->SetPadTopMargin(0.2);
+   myStyle->SetPadLeftMargin(0.2);
+   myStyle->SetPadRightMargin(0.2);
+   myStyle->SetPadTickX(1);
+   myStyle->SetPadTickY(1);
+   myStyle->SetFrameBorderMode(0);
+
+   myStyle->SetTitleBorderSize(0);
+   myStyle->SetOptTitle(1);
+
+   // Din letter
+//   myStyle->SetPaperSize(21, 28);
+
+   myStyle->SetStatBorderSize(0);
+   myStyle->SetStatColor(1184);
+   myStyle->SetStatH(.005);
+   myStyle->SetStatW(.1);
+
+   myStyle->SetStatX(0.77);
+   myStyle->SetStatY(0.78);
+   myStyle->SetStatFont(42);
+   myStyle->SetOptStat("e");// Show overflow and underflow as well
+   myStyle->SetOptFit(01111);
+   myStyle->SetPalette(1);
+
+   myStyle->SetMarkerStyle(8);
+   myStyle->SetMarkerSize(0.5);
+
+   // apply the new style
+   gROOT->SetStyle("MyStyle"); //uncomment to set this style
+   gROOT->ForceStyle(); // use this style, not the one saved in root files
+
+}
